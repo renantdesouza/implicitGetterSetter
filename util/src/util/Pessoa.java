@@ -16,12 +16,19 @@ public class Pessoa extends Alterable {
 		}
 	}
 	
-	@Inacessible(set=false)
+	@BeforeGet(method="beforeGet")
+	@AfterSet(method="afterSet")
 	private String nome;
-	@Inacessible(get=false)
 	private int idade;
 	private Sexo sexo;
 	
+	public void afterSet() {
+		System.out.println("executa após setar o nome");
+	}
+	
+	public void beforeGet() {
+		System.out.println("executa antes de dar get no nome");
+	}
 	
 	public Pessoa() {
 	}
