@@ -36,15 +36,17 @@ public class Pessoa extends Alterable {
 	public static void main(String[] args) throws Exception {
 		Pessoa p = new Pessoa();
 		//O uso do observer, está aqui;
-		p.set("name", "Renan Teixeira de Souza");
+		p.set("nome", "Renan Teixeira de Souza");
 		
 		// veja o atributo method do @AfterSet
 		// ele executa o método afterSet escrito na classe.
 		
-		p.get("name");
+		p.get("nome");
 		
 		// agora veja o mesmo atributo na anotacao @BeforeGet
 		// ele executa o metodo beforeGet escrito na classe.
+		
+		//cidinho ta em casa
 	}
 	
 	
