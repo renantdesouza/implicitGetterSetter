@@ -35,20 +35,16 @@ public class Pessoa extends Alterable {
 	
 	public static void main(String[] args) throws Exception {
 		Pessoa p = new Pessoa();
+		//O uso do observer, está aqui;
+		p.set("name", "Renan Teixeira de Souza");
 		
-		// Get e Set com acesso total, @Inacessible não usado.
-		p.set("sexo", Sexo.M);
-		System.out.println(p.get("sexo"));
+		// veja o atributo method do @AfterSet
+		// ele executa o método afterSet escrito na classe.
 		
-		p.set("nome", "Renan");
-		//nesse caso gera exceção get = true na @Inacessible
-		//descomente para ver
-		//System.out.println(p.get("nome")); 
-
-		//nesse caso gera uma exceção set = true na @Inacessible
-		//descomente para ver
-		//p.set("idade", 21); 
-		System.out.println(p.get("nome"));
+		p.get("name");
+		
+		// agora veja o mesmo atributo na anotacao @BeforeGet
+		// ele executa o metodo beforeGet escrito na classe.
 	}
 	
 	
